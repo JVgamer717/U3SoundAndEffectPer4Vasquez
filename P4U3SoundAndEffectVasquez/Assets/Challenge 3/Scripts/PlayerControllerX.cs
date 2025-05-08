@@ -19,6 +19,7 @@ public class PlayerControllerX : MonoBehaviour
     public AudioClip explodeSound;
     public AudioClip bounceSound;
     public bool isLowEnough;
+    public float height = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +42,7 @@ public class PlayerControllerX : MonoBehaviour
             playerRb.AddForce(Vector3.up * floatForce);
         }
 
-        if (transform.position.y > 13)
+        if (transform.position.y > height)
         {
             isLowEnough = false;
         }
